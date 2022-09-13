@@ -5,8 +5,8 @@
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& values) {
     //Implement statistics here
     Stats retVal;
-    retVal.average = CalculateAverage(values);
-    if(retVal.average < 0){
+    if(!values.empty()){
+        retVal.average = CalculateAverage(values);
         retVal.max = GetMax(values);
         retVal.min = GetMin(values);
     }
@@ -21,12 +21,9 @@ float Statistics::CalculateAverage(const std::vector<float>& values){
     float elementCount = 0.0;
     for(float i: values){
          sum += i;
-         elementCount++;
+         elementCount += 1.0;
     }
-    if(elementCount>0)
-        return sum/elementCount;
-    else
-        return -1.0;
+    return sum/elementCount;
 }
 
 float Statistics::GetMin(const std::vector<float>& values){
