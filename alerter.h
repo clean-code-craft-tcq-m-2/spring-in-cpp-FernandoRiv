@@ -1,6 +1,8 @@
 #ifndef _ALERTER_H
 #define _ALERTER_H
 
+#include <vector>
+
 namespace Alerts{
     class IAlerter
     {
