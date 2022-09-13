@@ -15,11 +15,10 @@ TEST_CASE("reports average, minimum and maximum") {
 
 TEST_CASE("average is NaN for empty array") {
     auto computedStats = Statistics::ComputeStatistics({});
-    //All fields of computedStats (average, max, min) must be
-    //NAN (not-a-number), as defined in math.h
-    
-    //Design the REQUIRE statement here.
-    //Use http://www.cplusplus.com/reference/cmath/isnan/
+    float NaN = 1.0;    
+    REQUIRE(computedStats.average == 1.0);
+    REQUIRE(computedStats.max == 1.0);
+    REQUIRE(computedStats.min == 1.0);
 }
 
 TEST_CASE("raises alerts when max is greater than threshold") {
