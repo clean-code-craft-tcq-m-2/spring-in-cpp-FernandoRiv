@@ -26,7 +26,7 @@ namespace Alerts{
     class IAlerter
     {
         public:
-            virtual ~IAlerter();
+            virtual ~IAlerter() {};
             virtual void SetAlert(bool) = 0;
     };
 
