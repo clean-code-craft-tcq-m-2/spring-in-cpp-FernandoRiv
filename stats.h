@@ -1,4 +1,8 @@
+#ifndef _STATS_H
+#define _STATS_H
+
 #include <vector>
+
 
 namespace Statistics {
     class Stats{
@@ -14,3 +18,5 @@ namespace Statistics {
     float GetMax(const std::vector<float>& values);
     void  NanReturn(Stats& stats);
 }
+
+#endif // _STATS_H
